@@ -1,0 +1,53 @@
+how to connect two ubuntu machines over network with on standard cable
+
+ cd /etc/netplan/
+ more 50-cloud-init.yaml
+One machines - sets wifi to hockeyX11_2g and eth0 to
+
+# This file is generated from information provided by the datasource.  Changes
+# to it will not persist across an instance reboot.  To disable cloud-init's
+# network configuration capabilities, write a file
+# /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg with the following:
+# network: {config: disabled}
+network:
+    ethernets:
+        eth0:
+            addresses:
+            - 10.0.0.10/24
+
+    version: 2
+    wifis:
+        wlan0:
+            access-points:
+                hockeyX11_2g:
+                    password: Judy1234
+            dhcp4: true
+            optional: true
+
+other machine (same place)
+
+# This file is generated from information provided by the datasource.  Changes
+# to it will not persist across an instance reboot.  To disable cloud-init's
+# network configuration capabilities, write a file
+# /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg with the following:
+# network: {config: disabled}
+network:
+    ethernets:
+        eth0:
+            addresses:
+            - 10.0.0.20/24
+   
+    version: 2
+    wifis:
+        wlan0:
+            optional: true
+            access-points:
+              hockeyX11_2g:
+                password: Judy1234
+            dhcp4: true
+
+remeber 
+sudo netplan try 50-cloud-init.yaml
+
+for static ip on teh wifi setup on wifi router (op reservation) 
+go to hockeyX11_2g on ipad and to GL... router
