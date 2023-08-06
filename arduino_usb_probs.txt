@@ -1,0 +1,3 @@
+arduino
+for usb permission problaems:
+sudo adduser second_user dialout
