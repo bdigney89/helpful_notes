@@ -1,0 +1,10 @@
+for roboclaw on ros2
+
+inistall ros control 
+sudo apt-get install ros2-control
+sudo apt-get install ros-humble-ros2
+then follow
+
+https://github.com/dumbotics
+
+sudo usermod -a -G dialout $USER
