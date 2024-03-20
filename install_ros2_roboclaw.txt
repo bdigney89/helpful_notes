@@ -8,3 +8,5 @@ then follow
 https://github.com/dumbotics
 
 sudo usermod -a -G dialout $USER
+
+ubuntu@p4-1:~/ros2_roboclaw$ ros2 launch ag_sml_bringup minimal.launch.py 
