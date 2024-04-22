@@ -12,4 +12,8 @@ mixture of command line and vscode
     from version control 
     - stage changes (including new files with +)
     -add comment
-    -
+    -use dropdown in blue commit button to find "commit and push"
+
+3)  Do the above on the development machine and on robots and bases
+    cd into repo_dir 
+    repo_dir% git pull
