@@ -1,0 +1,5 @@
+2008  mkdir -p ros2_nav/src
+ 2009  cd ros2_nav
+ 2010  git clone https://github.com/ros-planning/navigation2.git --branch $ROS_DISTRO ./src/navigation2
+ 2011  rosdep install -y   --from-paths ./src   --ignore-src
+ 2012  colcon build   --symlink-install

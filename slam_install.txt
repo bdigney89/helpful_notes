@@ -1,0 +1,8 @@
+1996  cd ..
+ 1997  mkdir -p ros2_local/src
+ 1998  cd ros2_local/src
+ 1999  git clone https://github.com/SteveMacenski/slam_toolbox.git -b humble
+ 2000  cd ..
+ 2001  source /opt/ros/humble/setup.bash 
+ 2002  rosdep install -q -y -r --from-paths src --ignore-src
+ 2003  colcon build
