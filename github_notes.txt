@@ -1,0 +1,15 @@
+mixture of command line and vscode
+
+1) iniitating
+    cd into repo_dir  
+    repo_dir% git init 
+    repo_dir% git status
+    repo_dir% git add .  or 
+    repo_dir% git file_name 
+
+2) commit and push (to github)
+    repo_dir% code .
+    from version control 
+    - stage changes (including new files with +)
+    -add comment
+    -
